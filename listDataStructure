@@ -1,0 +1,20 @@
+Summary: 
+List 	    	: Ordered, Mutable 
+String 		  : Ordered, Immutable 
+Tuple 		  : 		
+Dictionary 	:
+
+
+Methods:
+len()
+max() - What type of object - (Str - sort alphabetically and give lastelement) 
+min()
+sorted() - reverse=True 
+'\n'.join() - Seperator followed by join.  (Single elemet type list) 
+append() - adds as a last element 
+
+Operator: Finding element is 'in' or 'not in' the list
+in  
+not in 
+
+
