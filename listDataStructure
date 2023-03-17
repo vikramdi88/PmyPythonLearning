@@ -2,7 +2,7 @@ Summary:
 List 	    	: Ordered, Mutable 
 String 		  : Ordered, Immutable 
 Tuple 		  : Ordered, Immutable
-Set         : Unordered
+Set         : Unordered, Mutable
 Dictionary 	:
 
 
