@@ -1,0 +1,165 @@
+1. if, elif, else
+2. Boolean - Expression that checks for boolean 
+3. if True:  --> Bad practice as it will always be true
+4. if x == True or False (Invalid, as it doesn't work on single condition) 
+
+
+5. for -> Very powerful and work best with any iterables ( Iterables can be list, string, tuples. Dict can aslo work but for keys) 
+Run finite number of times, but not on condition 
+
+cities = ['new york', 'delhi']
+
+Smaple code to create a tile charecters: 
+for index in range(len(cities)):
+  city[index] = city[index].title()
+print(cities)
+  
+Function -> range(start, stop, sep) 
+start - start of the range, By default 0
+Stop - when to stop 
+sep = how much each element would be seperated - by default 1
+
+Fucntion --> replace(a,b)
+replcae a with b 
+
+6. Building Dictionaries
+
+e.g. 1 --> Using simple for loop
+
+book_title =  ['great', 'expectations','the', 'adventures', 'of', 'sherlock','holmes','the','great','gasby','hamlet','adventures','of','huckleberry','fin']
+word_counter = {}```
+**Step 2.** Iterate through each element in the list. If an element is already included in the dictionary, add 1 to its value. If not, add the element to the dictionary and set its value to 1.
+    ```
+    for word in book_title:
+        if word not in word_counter:
+            word_counter[word] = 1
+        else:
+            word_counter[word] += 1```
+    
+    #####  What's happening here?
+    - The `for` loop iterates through each element in the list. For the first iteration, `word` takes the value 'great'.
+    - Next, the if statement checks if `word` is in the `word_counter` dictionary.
+    - Since it doesn't yet, the statement  `word_counter[word] = 1` adds *great* as a key to the dictionary with a value of 1.
+    - Then, it leaves the if else statement and moves on to the next iteration of the for loop. `word` now takes the value *expectations* and repeats the process.
+    - When the if condition is not met, it is because that`word` already exists in the `word_counter` dictionary, and the statement `word_counter[word] = word_counter[word] + 1` increases the count of that word by 1.
+    - Once the `for` loop finishes iterating through the list, the `for` loop is complete. 
+    
+    We can see the output by printing out the dictionary. Printing `word_counter` results in the following output.
+    ```
+{'great': 2, 'expectations': 1, 'the': 2, 'adventures': 2, 'of': 2, 'sherlock': 1, 'holmes': 1, 'gasby': 1, 'hamlet': 1, 'huckleberry': 1, 'fin': 1}
+
+e.g. 2 --> Using get() method ( get() basically returns the values of the key passed. In this case if the key is not present, then 0 is returned)  
+
+for word in book_title:
+    word_counter[word] = word_counter.get(word, 0) + 1```
+
+#####  What's happening here?
+- The `for` loop iterates through the list as we saw earlier. The `for` loop feeds 'great' to the next statement in the body of the `for` loop.
+-   In this line: ` word_counter[word] = word_counter.get(word,0) + 1`, since the key *'great'* doesn't yet exist in the dictionary, `get()` will return the value 0 and `word_counter[word]` will be set to 1.
+- Once it encounters a word that already exists in `word_counter` (e.g. the second appearance of *'the'*),  the  value for that key is incremented by 1. On the second appearance of 'the', the key's value would add 1 again, resulting in 2.
+- Once the `for` loop finishes iterating through the list, the `for` loop is complete.
+
+Printing `word_counter` shows us we get the same result as we did in method 1.
+    ```
+    {'great': 2, 'expectations': 1, 'the': 2, 'adventures': 2, 'of': 2, 'sherlock': 1, 'holmes': 1, 'gasby': 1, 'hamlet': 1, 'huckleberry': 1, 'fin': 1}
+    ```
+    
+7 . Iterating through Dictionaries
+    
+    e.g. 1:
+    for key in dict: 
+      print(key)
+      
+    e.g.2: (User items() --> retruns tuple of (key, value) pairs)
+    for key, value in dict.items():
+      print(key, value)
+      
+  
+8. While Loops: Runs infinite until a condition is met
+  
+  Function sum() -> Retruns the sum of all the elements in the list 
+  Function pop() -> Inverse of append() method. It removes the last element of the list and return
+  
+  e.g.
+  card_deck =[4,11,18,8,2,1]
+  hand =[]
+  while sum(hand) <= 17:
+    hand.append(card_dec.pop()) 
+    print(sum(hand)
+  print(hand)
+  
+  Output:
+  10, 
+  18
+  [10,8]
+    
+  
+9. break & continue
+  if we want to break the condition during the loop or skip the condition fully 
+  
+10. zip and enumerate
+  
+  zip --> combines two list and returns an iterator, so we need to combine in list to see the elements. 
+  items = ['banana', 'mattress', 'dog kennel']
+  weights = [15, 34, 42]
+  
+  Two ways to handle the ZIP: 
+  1. ## Convert the iterator retruned 
+  e.g.
+  print(list(zip(items, weights)))
+  Output --> [("banana", 15), ("matress", 34), ("dog kennel", 42)]
+  
+  2. ## User loop to iterate the values 
+  e.g. 
+  for cargo in zip(items, weight):
+    print(cargo[0],cargo[1])
+  Output --> [("banana", 15), ("matress", 34), ("dog kennel", 42)]
+  
+  
+  
+  unzip --> using zip(*cargo) 
+  returns two tuples
+  e.g. 
+  items, weights = zip(*cargo)
+  output --> ('banana', 'matress','dog kennel')
+  (15,34,42)
+  
+  enumerate --> Iterate the value of list along with the index (retunr tuples)
+  
+  e.g. (Legacy zip)
+  items = ['banana', 'mattress', 'dog kennel']
+  for i, item in zip(range(len(items), items):
+    print(i, item)
+   output-->
+   0 banana
+   1 mattress
+   2 dog kennel 
+   
+   e.g.
+   for i, item in enumerate(items):
+    print(i, item)
+   
+
+11. List comprehensions
+
+  cities = ['a','b','c']
+  capitalized_cities = [i.title() for i in cities]
+  
+  e.g. Create a list of numbers from 0 to 64
+  squares = [ i**2 for i in range(9)]
+  Output --> [0, 1, 4, 9, 16, 25, 36, 49, 64]
+  
+  e.g. Using If/else in List comprehensions 
+  squares = [ i**2 for i in range(9) if i % 2 == 0]
+  Output --> [0, 4, 16, 36, 64]
+  
+  squares = [ i**2 if i % 2 == 0 else i + 3 for i in range(9) ]
+  Output --> [0, 4, 4, 16, 8, 36, 10,  64]
+  
+    
+    
+    
+    
+    
+    
+    
