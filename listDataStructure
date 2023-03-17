@@ -2,7 +2,7 @@ Summary:
 List 	    	: Ordered, Mutable 
 String 		  : Ordered, Immutable 
 Tuple 		  : Ordered, Immutable
-Set         :
+Set         : Unordered
 Dictionary 	:
 
 
@@ -13,6 +13,7 @@ min()
 sorted() - reverse=True 
 '\n'.join() - Seperator followed by join.  (Single elemet type list) 
 append() - adds as a last element 
+pop() - Last element
 
 Operator: Finding element is 'in' or 'not in' the list
 in  
