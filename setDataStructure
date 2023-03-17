@@ -1,0 +1,19 @@
+Set - Data Type for Mutable, unordered collection of unique list 
+
+e.g. You wan to find that which coinntry is using you website. 
+You checked there are 700+ logings everyday from diff countries, but we know there is less than 700 countries in the world. 
+Set can help to organize that data to find the countries 
+
+Store the countries logged in a List 
+Create a set from that List 
+
+countries = ['A', 'B', 'C', 'C', 'B']
+country_set = set(countries)
+len(country_set) --> 3 
+
+'in' and 'not in' menthods can be used 
+
+Methods:
+add() --> unlike append for list. The reason is that set is unordered so nothing can be added at last 
+pop() --> random element is removed
+union(), intersection() & other mathematical functions
