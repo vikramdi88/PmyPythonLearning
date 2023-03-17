@@ -3,7 +3,7 @@ List 	    	: Ordered, Mutable
 String 		  : Ordered, Immutable 
 Tuple 		  : Ordered, Immutable
 Set         : Unordered, Mutable
-Dictionary 	: Unordered, Mutable
+Dictionary 	: Unordered, Mutable   (Keys - Immutable) 
 
 Operator: Finding element is 'in' or 'not in' the list
 in  
