@@ -1,7 +1,8 @@
 Summary: 
 List 	    	: Ordered, Mutable 
 String 		  : Ordered, Immutable 
-Tuple 		  : 		
+Tuple 		  : Ordered, Immutable
+Set         :
 Dictionary 	:
 
 
