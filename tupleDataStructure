@@ -1,0 +1,9 @@
+Tuple - Immuntable, Ordered 
+
+Tuple used there are values which are so cloely related that they will be used together. 
+Used to assign multiple values in compact way
+
+eg. 
+dimension - 52, 40, 100  (Tuple packing)   --> Dimension will be a tuple  -- Paranthesis is optional
+length, breadth, height = dimension (Tuple Unpacking)
+
